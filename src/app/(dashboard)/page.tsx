@@ -1,7 +1,8 @@
+import { Suspense } from 'react'
 import { Nav } from '@/components/nav'
 import { IngestForm } from '@/components/programs/ingest-form'
 import { ProgramGrid } from '@/components/programs/program-grid'
-import { ChatIcon, CompareIcon, DegreeIcon } from '@/components/ui/icons'
+import { ChatIcon, CompareIcon, DegreeIcon, SpinnerIcon } from '@/components/ui/icons'
 
 export default function DashboardPage() {
   return (
@@ -77,7 +78,14 @@ export default function DashboardPage() {
               Programs you've added. Click a card to explore details and ask questions.
             </p>
           </div>
-          <ProgramGrid />
+          <Suspense fallback={
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <SpinnerIcon className="h-4 w-4 animate-spin" />
+              Loading programs...
+            </div>
+          }>
+            <ProgramGrid />
+          </Suspense>
         </section>
 
       </main>
