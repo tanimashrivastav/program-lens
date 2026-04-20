@@ -1,4 +1,4 @@
-import { scrapePage } from './static-scraper'
+import { scrapePage } from './static-page-scraper'
 
 const MAX_PAGES = 10   // max pages to crawl per program
 const MAX_DEPTH = 2    // how many levels deep to follow links

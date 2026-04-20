@@ -41,9 +41,11 @@ export const institutionTypeEnum = pgEnum('institution_type', [
 export const programs = pgTable('programs', {
   id: uuid('id').defaultRandom().primaryKey(),
   sourceUrl: text('source_url').notNull().unique(),
+  slug: text('slug').unique(),                       // e.g. "uw-ms-information-systems"
   programName: text('program_name'),
   universityName: text('university_name'),
-  department: text('department'),
+  college: text('college'),                        // e.g. "Foster School of Business"
+  department: text('department'),                  // e.g. "Department of Information Systems"
   degree: text('degree'),                          // e.g. "M.S.", "B.S.", "Ph.D."
   programSizeCategory: programSizeCategoryEnum('program_size_category'),
   institutionType: institutionTypeEnum('institution_type'),

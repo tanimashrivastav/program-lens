@@ -15,6 +15,20 @@
       "when": 1776459383318,
       "tag": "0001_high_katie_power",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1776625367795,
+      "tag": "0002_black_supreme_intelligence",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1776625614326,
+      "tag": "0003_glorious_bloodstorm",
+      "breakpoints": true
     }
   ]
 }
